@@ -7,7 +7,7 @@ app.use(express.json());
 app.use(express.static('public'));
 
 const replicate = new Replicate({
-  auth: process.env.REPLICATE_API_TOKEN,
+  auth: process.env.AI_API_KEY,
 });
 
 app.post('/chat', async (req, res) => {
