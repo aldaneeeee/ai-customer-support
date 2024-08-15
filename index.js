@@ -13,7 +13,7 @@ const replicate = new Replicate({
 app.post('/chat', async (req, res) => {
   try {
     const { message } = req.body;
-    
+
     if (!message) {
       return res.status(400).json({ error: 'Message is required' });
     }
@@ -32,7 +32,7 @@ app.post('/chat', async (req, res) => {
         }
       }
     );
-    
+
     console.log('Replicate API response:', output);
 
     if (Array.isArray(output) && output.length > 0) {
@@ -51,8 +51,6 @@ app.post('/chat', async (req, res) => {
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
-
-
 
 
 
